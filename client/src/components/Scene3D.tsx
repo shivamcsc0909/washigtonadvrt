@@ -140,7 +140,7 @@ function CameraController() {
 export function Scene3D() {
   return (
     <div className="fixed inset-0 z-0 pointer-events-none bg-[#020617]">
-      <Canvas dpr={[1, 1.5]} gl={{ antialias: true, alpha: false }} powerPreference="high-performance">
+      <Canvas dpr={[1, 1.5]} gl={{ antialias: true, alpha: false }}>
         <PerspectiveCamera makeDefault position={[0, 0, 15]} fov={60} />
         <color attach="background" args={['#020617']} />
         <fog attach="fog" args={['#020617', 10, 60]} />
