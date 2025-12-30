@@ -1,0 +1,107 @@
+TASK:
+Add a PREMIUM 3D SCROLL EXPERIENCE inspired by rangerover3d.vercel.app
+to the "Washington Advert" website.
+
+IMPORTANT:
+• This is a digital marketing agency website
+• DO NOT add heavy 3D models
+• Recreate ONLY the motion, depth, and camera feel
+• Brand name must remain "Washington Advert"
+
+==============================
+CORE EXPERIENCE GOAL
+==============================
+
+When the user scrolls:
+• The page should feel like a camera moving through space
+• Background elements move at different depths
+• Smooth, cinematic, luxury motion
+• Similar FEEL to rangerover3d.vercel.app
+
+==============================
+THREE.JS SCENE (MANDATORY)
+==============================
+
+Create ONE global Three.js scene:
+
+- Fullscreen canvas fixed in background
+- Dark navy / blue gradient environment
+- Elements inside scene:
+  • abstract planes
+  • soft glowing particles
+  • grid or lines for depth
+  • subtle light sources
+
+NO real-world objects
+NO text inside Three.js
+
+==============================
+SCROLL → CAMERA MOVEMENT
+==============================
+
+On scroll:
+• Move camera slowly on Z-axis (forward motion)
+• Slight X/Y drift for cinematic feel
+• Change depth of background layers
+• Smooth interpolation (lerp)
+
+Each section scroll = camera position change
+(similar to rangerover3d scroll experience)
+
+==============================
+PARALLAX LAYERS
+==============================
+
+Content layers:
+• Text layer → closest to user (moves least)
+• Mid background → slow movement
+• Deep background → more movement
+
+This creates 3D depth illusion.
+
+==============================
+SECTION ANIMATION
+==============================
+
+As camera moves:
+• Sections fade in naturally
+• Slight upward motion (10–20px)
+• No text masking
+• No background blocks on text
+
+Cards:
+• Enter with depth-based animation
+• Subtle shadow increase
+
+==============================
+PERFORMANCE RULES
+==============================
+
+• Use requestAnimationFrame
+• Optimize for 60fps
+• Respect prefers-reduced-motion
+• Disable heavy effects on mobile
+• Mobile fallback = normal scroll animation
+
+==============================
+STRICT RULES
+==============================
+
+❌ No animated text backgrounds
+❌ No blue blocks
+❌ No rotating text
+❌ No flashy effects
+
+✔ Text always readable
+✔ Three.js only for background + camera motion
+✔ Clean premium agency look
+
+==============================
+FINAL RESULT
+==============================
+
+A "Washington Advert" website that:
+• Feels like a cinematic 3D experience
+• Has rangerover3d-style scroll depth
+• Remains lightweight & professional
+• Is client-ready and production-safe
