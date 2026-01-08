@@ -10,6 +10,36 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      window.onerror = function(message, source, lineno, colno, error) {
+        const errorDiv = document.createElement('div');
+        errorDiv.style.position = 'fixed';
+        errorDiv.style.top = '0';
+        errorDiv.style.left = '0';
+        errorDiv.style.width = '100%';
+        errorDiv.style.backgroundColor = '#ffffee';
+        errorDiv.style.color = 'red';
+        errorDiv.style.padding = '20px';
+        errorDiv.style.zIndex = '999999';
+        errorDiv.style.borderBottom = '1px solid red';
+        errorDiv.innerHTML = '<h3>Runtime Error</h3><pre>' + message + '\n' + source + ':' + lineno + ':' + colno + '</pre>';
+        document.body.appendChild(errorDiv);
+      };
+      window.onunhandledrejection = function(event) {
+        const errorDiv = document.createElement('div');
+        errorDiv.style.position = 'fixed';
+        errorDiv.style.top = '50px';
+        errorDiv.style.left = '0';
+        errorDiv.style.width = '100%';
+        errorDiv.style.backgroundColor = '#ffffee';
+        errorDiv.style.color = 'red';
+        errorDiv.style.padding = '20px';
+        errorDiv.style.zIndex = '999999';
+        errorDiv.style.borderBottom = '1px solid red';
+        errorDiv.innerHTML = '<h3>Unhandled Promise Rejection</h3><pre>' + event.reason + '</pre>';
+        document.body.appendChild(errorDiv);
+      };
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
